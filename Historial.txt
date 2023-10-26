@@ -1,0 +1,28 @@
+===============
+Fecha : 26-10-2023
+---- Datos ----
+Base : 2.0
+Altura : 2.0
+---- Resultado ----
+El Area es 4.0 Perimetro 8.0
+===============
+Fecha : 26-10-2023
+---- Datos ----
+Base : 10.0
+Altura : 20.0
+---- Resultado ----
+El Area es 200.0 Perimetro 60.0
+===============
+Fecha : 26-10-2023
+---- Datos ----
+Base : 1.0
+Altura : 2.0
+---- Resultado ----
+El Area es 2.0 Perimetro 6.0
+===============
+Fecha : 26-10-2023
+---- Datos ----
+Base : 20.0
+Altura : 10.0
+---- Resultado ----
+El Area es 200.0 Perimetro 60.0
