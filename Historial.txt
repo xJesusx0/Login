@@ -26,3 +26,10 @@ Base : 20.0
 Altura : 10.0
 ---- Resultado ----
 El Area es 200.0 Perimetro 60.0
+===============
+Fecha : 31-10-2023
+---- Datos ----
+Base : 2.0
+Altura : 3.0
+---- Resultado ----
+El Area es 6.0 Perimetro 10.0

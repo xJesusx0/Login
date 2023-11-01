@@ -15,26 +15,17 @@ public class NewJFrameLogin extends javax.swing.JFrame {
         initComponents();
     }
     
-    public static boolean ValidarUsuario(String Usuario) throws FileNotFoundException, IOException{
-        BufferedReader file = new BufferedReader(new FileReader("Nombres.txt"));
+    public static boolean ValidarDatos(String Nombre, String Contraseña) throws FileNotFoundException, IOException{
+        BufferedReader file = new BufferedReader(new FileReader("Datos.txt"));
         String line = file.readLine();
         while(line != null){
-            if(line.equals(Usuario)){
+            String Datos[] = line.split("\\,");
+            if(Datos[0].equals(Nombre) && Datos[1].equals(Contraseña)){
                 return true;
             }
             line = file.readLine();
         }
-        return false;
-    }
-    public static boolean ValidarContraseña(String Contraseña) throws FileNotFoundException, IOException{
-        BufferedReader file = new BufferedReader(new FileReader("Contraseñas.txt"));
-        String line = file.readLine();
-        while(line != null){
-            if(line.equals(Contraseña)){
-                return true;
-            }
-            line = file.readLine();
-        }
+        
         return false;
     }
     
@@ -107,7 +98,7 @@ public class NewJFrameLogin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-            if(ValidarUsuario(TxtUsuario.getText())&& ValidarContraseña(TxtContraseña.getText())){
+            if(ValidarDatos(TxtUsuario.getText(),TxtContraseña.getText())){
                 dispose();
                 JOptionPane.showMessageDialog(null, "Sesion iniciada");
                 
@@ -118,7 +109,7 @@ public class NewJFrameLogin extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Datos invalidos","Error",JOptionPane.ERROR_MESSAGE);
             }
         } catch (IOException ex) {
-            System.out.println("hola");
+            System.out.println("Error con el archivo TXT");
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
